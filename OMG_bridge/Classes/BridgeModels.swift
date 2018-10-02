@@ -11,35 +11,35 @@ import Foundation
 
 public struct BridgeResponse : Codable {
     
-    var status:Int
-    var body:BridgeBody
+    public var status:Int
+    public var body:BridgeBody
 }
 
 
 public struct BridgeBody : Codable {
     
-    var _id:String
-    var updatedAt:String
-    var createdAt:String
-    var originName:String
-    var fileName:String
-    var tenant_id:String
-    var thumbnail:String
-    var logo:String
-    var fingerPrints:[FingerPrintsBody]
-    var type:String
+    public var _id:String
+    public var updatedAt:String
+    public var createdAt:String
+    public var originName:String
+    public var fileName:String
+    public var tenant_id:String
+    public var thumbnail:String
+    public var logo:String
+    public var fingerPrints:[FingerPrintsBody]
+    public var type:String
 }
 
 public struct FingerPrintsBody : Codable {
     
-    var _id:String
-    var updatedAt:String
-    var createdAt:String
-    var title:String
-    var description:String
-    var linkURL:String
-    var callbackURL:String
-    var fingerPrintReady:Bool
+    public var _id:String
+    public var updatedAt:String
+    public var createdAt:String
+    public var title:String
+    public var description:String
+    public var linkURL:String
+    public var callbackURL:String
+    public var fingerPrintReady:Bool
 }
 
 
