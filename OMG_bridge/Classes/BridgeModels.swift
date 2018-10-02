@@ -9,14 +9,14 @@
 import Foundation
 
 
-struct BridgeResponse : Codable {
+public struct BridgeResponse : Codable {
     
     var status:Int
     var body:BridgeBody
 }
 
 
-struct BridgeBody : Codable {
+public struct BridgeBody : Codable {
     
     var _id:String
     var updatedAt:String
@@ -30,7 +30,7 @@ struct BridgeBody : Codable {
     var type:String
 }
 
-struct FingerPrintsBody : Codable {
+public struct FingerPrintsBody : Codable {
     
     var _id:String
     var updatedAt:String
