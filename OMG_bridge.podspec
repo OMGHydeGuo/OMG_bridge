@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OMG_bridge'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'OMG bridge.'
   s.swift_version    = '4.2'
 
@@ -33,9 +33,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'OMG_bridge/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'OMG_bridge' => ['OMG_bridge/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'OMG_bridge' => ['OMG_bridge/Assets/MP3/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
