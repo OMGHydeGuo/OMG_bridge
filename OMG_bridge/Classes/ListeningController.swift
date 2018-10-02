@@ -20,7 +20,7 @@ public protocol BridgeDelegate: class {
     func onGetBridgeData(data:BridgeBody?)
 }
 
-class ListeningController: NSObject ,AVAudioRecorderDelegate{
+public class ListeningController: NSObject ,AVAudioRecorderDelegate{
     
     var delegate:BridgeDelegate?
     
@@ -29,7 +29,7 @@ class ListeningController: NSObject ,AVAudioRecorderDelegate{
     var audioRecorder: AVAudioRecorder!
     
     
-    override init()
+    override public init()
     {
         
         recordingSession = AVAudioSession.sharedInstance()
@@ -52,7 +52,7 @@ class ListeningController: NSObject ,AVAudioRecorderDelegate{
     }
     
     
-    func startRecord()
+    public func startRecord()
     {
         guard recording == false else {
             return

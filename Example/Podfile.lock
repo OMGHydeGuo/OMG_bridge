@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
-  - OMG_bridge (0.1.1):
+  - OMG_bridge (0.1.3):
     - Alamofire (~> 4.6)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  OMG_bridge: 0df911a0f5779d64f3f6f64212e2e4533125484f
+  OMG_bridge: 9bc65d883801f7fa4297fe361049ea2c4addab3d
 
 PODFILE CHECKSUM: 9e39c642e56b1a425be365f2e4349d7a1d0ce64e
 

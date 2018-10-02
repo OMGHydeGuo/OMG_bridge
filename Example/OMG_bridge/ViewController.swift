@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import OMG_bridge
 
-class ViewController: UIViewController {
+class ViewController: BaseBridgeViewController ,BridgeDelegate{
+    func onListening() {
+        
+    }
+    
+    func onGetBridgeData(data: BridgeBody?) {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var _ = ListeningController()
         
     }
 

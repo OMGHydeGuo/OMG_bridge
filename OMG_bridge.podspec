@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OMG_bridge'
-  s.version          = '0.1.2'
+  s.version          = '0.1.4'
   s.summary          = 'OMG bridge.'
   s.swift_version    = '4.2'
 
@@ -38,6 +38,6 @@ TODO: Add long description of the pod here.
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'UIKit', 'Alamofire'
    s.dependency 'Alamofire', '~> 4.6'
 end

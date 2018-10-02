@@ -10,14 +10,14 @@ import Foundation
 import AVFoundation
 
 
-class BaseBridgeViewController: UIViewController{
+ open class BaseBridgeViewController: UIViewController{
 
 
     fileprivate var player: AVAudioPlayer?
     
     var omgBridgeListener:ListeningController = ListeningController()
     
-    override func viewDidLoad() {
+    override  open func viewDidLoad() {
         super.viewDidLoad()
         /**
          open for shaking detect
@@ -25,13 +25,13 @@ class BaseBridgeViewController: UIViewController{
         UIApplication.shared.applicationSupportsShakeToEdit = true
     }
     
-    override func didReceiveMemoryWarning() {
+    override  open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     //-------------------------shark-----------------------
     
-    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+    override  open func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
   
         /// play sound effect
         let path1 = Bundle.main.path(forResource: "0020", ofType:"aac")
@@ -44,11 +44,11 @@ class BaseBridgeViewController: UIViewController{
         
     }
     
-    override func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+    override  open func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
 
     }
     
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+    override  open func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         omgBridgeListener.startRecord()
     }
