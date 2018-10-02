@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OMG_bridge_Example' do
+  pod 'OMG_bridge', :path => '../'
+
+  target 'OMG_bridge_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

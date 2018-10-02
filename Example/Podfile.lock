@@ -1,0 +1,16 @@
+PODS:
+  - OMG_bridge (0.1.0)
+
+DEPENDENCIES:
+  - OMG_bridge (from `../`)
+
+EXTERNAL SOURCES:
+  OMG_bridge:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OMG_bridge: b57b29c6fd15b96785ced4ec7b3ec4a9a22772a9
+
+PODFILE CHECKSUM: 9e39c642e56b1a425be365f2e4349d7a1d0ce64e
+
+COCOAPODS: 1.5.3
