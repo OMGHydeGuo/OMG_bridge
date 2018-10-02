@@ -20,6 +20,19 @@ it, simply add the following line to your Podfile:
 pod 'OMG_bridge'
 ```
 
+Start bridge detect , you just need to instance ListeningController . And call
+
+```ruby
+startRecord()
+```
+Get data , will return data from BridgeDelegate .
+```ruby
+func onGetBridgeData(data:BridgeBody?)
+```
+
+If you need to  start detect by shaking the phone , just extends BaseBridgeViewController
+
+
 ## Author
 
 Hyde Guo, hydeguo@onwardsmg.com
