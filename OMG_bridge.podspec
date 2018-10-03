@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OMG_bridge'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'OMG bridge.'
   s.swift_version    = '4.2'
 
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.author           = { 'Hyde Guo' => 'hydeguo@onwardsmg.com' }
   s.source           = { :git => 'https://github.com/OMGHydeGuo/OMG_bridge.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'OMG_bridge/Classes/**/*'

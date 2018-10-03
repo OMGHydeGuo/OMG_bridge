@@ -16,6 +16,7 @@
 		C1CC2CFE21646EFE001D27F7 /* ListeningPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CC2CFA21646EFE001D27F7 /* ListeningPageController.swift */; };
 		C1CC2D0021646EFE001D27F7 /* BridgeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CC2CFC21646EFE001D27F7 /* BridgeDetailController.swift */; };
 		C1CC2D0221646F65001D27F7 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CC2D0121646F65001D27F7 /* Cells.swift */; };
+		C1CC2D0B2164B9A5001D27F7 /* bridge_rock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1CC2D0A2164B997001D27F7 /* bridge_rock.mp3 */; };
 		C2A893CEBCB55DDE7D6C89B8 /* Pods_OMG_bridge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087F3062675027ED57B34EFA /* Pods_OMG_bridge_Example.framework */; };
 		E6079D0A467B900BB27E5401 /* Pods_OMG_bridge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA95187D86B3D3283DFDAC /* Pods_OMG_bridge_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		C1CC2CFA21646EFE001D27F7 /* ListeningPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListeningPageController.swift; sourceTree = "<group>"; };
 		C1CC2CFC21646EFE001D27F7 /* BridgeDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeDetailController.swift; sourceTree = "<group>"; };
 		C1CC2D0121646F65001D27F7 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		C1CC2D0A2164B997001D27F7 /* bridge_rock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bridge_rock.mp3; sourceTree = "<group>"; };
 		D5835F0D03154DE393FE0F30 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				C1CC2CFC21646EFE001D27F7 /* BridgeDetailController.swift */,
 				C1CC2D0121646F65001D27F7 /* Cells.swift */,
 				C1CC2CF921646EFE001D27F7 /* BridgeListController.swift */,
+				C1CC2D0A2164B997001D27F7 /* bridge_rock.mp3 */,
 				C1CC2CFA21646EFE001D27F7 /* ListeningPageController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CC2D0B2164B9A5001D27F7 /* bridge_rock.mp3 in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,

@@ -8,8 +8,6 @@
 
 import Foundation
 import UIKit
-import AVFoundation
-import Alamofire
 import OMG_bridge
 
 
@@ -38,7 +36,6 @@ class ListeningPageController: BaseBridgeViewController,BridgeDelegate{
         loading.isHidden = true
         if let hasData = data
         {
-            BridgeDetailController.data = hasData
             NotificationCenter.default.post(name: Notification.Name(rawValue: "new_bridge"), object: self, userInfo: ["data":hasData])
         }
         self.onReturn()

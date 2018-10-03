@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="79" y="56"/>
         </scene>
-        <!--Bridge List Controller-->
+        <!--Bridge Demo-->
         <scene sceneID="STW-et-oVQ">
             <objects>
                 <tableViewController storyboardIdentifier="BridgePage" id="0Bs-Tb-1uT" customClass="BridgeListController" customModule="OMG_Pro" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                             <outlet property="delegate" destination="0Bs-Tb-1uT" id="920-8L-mKj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="UPf-hP-kIv"/>
+                    <navigationItem key="navigationItem" title="Bridge Demo" id="UPf-hP-kIv"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>

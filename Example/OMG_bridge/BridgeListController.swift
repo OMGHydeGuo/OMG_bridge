@@ -37,7 +37,6 @@ class BridgeListController: UITableViewController{
         self.tableView.layoutMargins = UIEdgeInsets.zero;
         self.tableView.separatorColor = UIColor.darkGray
         
-
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -63,6 +62,7 @@ class BridgeListController: UITableViewController{
         let data:BridgeBody=(notice as NSNotification).userInfo!["data"] as! BridgeBody
         self.bridge_list.append(data)
         self.tableView.reloadData()
+        BridgeDetailController.data = data
         performSegue(withIdentifier: "BridgeDetail", sender: nil)
     }
     

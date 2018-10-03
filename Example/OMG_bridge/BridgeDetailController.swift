@@ -34,7 +34,7 @@ class BridgeDetailController: UITableViewController{
         navigationItem.titleView = iconTop
         navigationItem.title = ""
         
-        //        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        
         self.tableView.separatorInset = UIEdgeInsets.zero;
         self.tableView.layoutMargins = UIEdgeInsets.zero;
         self.tableView.separatorColor = UIColor.darkGray
@@ -81,23 +81,5 @@ class BridgeDetailController: UITableViewController{
         return .none
     }
     
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
-        
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.001
-    }
-   
-    
-    @IBAction func close()
-    {
-        //        delegates?.showTopVideoList(false)
-        //        delegates?.onSubViewClose()
-    }
-
     
 }

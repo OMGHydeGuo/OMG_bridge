@@ -33,14 +33,15 @@ open class BaseBridgeViewController: UIViewController{
     override  open func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         /// play sound effect
-        let path1 = Bundle.main.path(forResource: "rock", ofType:"mp3")
-        let data1 = NSData(contentsOfFile: path1!)
-        self.player = try? AVAudioPlayer(data: data1! as Data)
-        //        self.player?.delegate = self
-        self.player?.updateMeters()
-        self.player?.prepareToPlay()
-        self.player?.play()
         
+        if let path = Bundle.main.path(forResource: "bridge_rock", ofType:"mp3")
+        {
+            let data = NSData(contentsOfFile: path)
+            self.player = try? AVAudioPlayer(data: data! as Data)
+            self.player?.updateMeters()
+            self.player?.prepareToPlay()
+            self.player?.play()
+        }
     }
     
     override  open func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
