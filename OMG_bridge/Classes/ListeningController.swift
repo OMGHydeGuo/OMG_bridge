@@ -22,7 +22,7 @@ public protocol BridgeDelegate: class {
 
 public class ListeningController: NSObject ,AVAudioRecorderDelegate{
     
-    var delegate:BridgeDelegate?
+    open var delegate:BridgeDelegate?
     
     var recording:Bool = false
     var recordingSession: AVAudioSession!
@@ -119,30 +119,67 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
                                         debugPrint(response.result)
                                         
                                         let match =  String(data: response.data!, encoding: .utf8)?.contains("Not Match") == false;
-                                     
+                                        
                                         if match
                                         {
                                             do{
                                                 let bridgeResponse:[BridgeBody] = try JSONDecoder().decode([BridgeBody].self, from: response.data!)
-                                           
-                                                let newB = bridgeResponse[0];
+                                                
+                                                let newB = bridgeResponse[0]
                                                 self.delegate?.onGetBridgeData(data: newB)
+                                                self.sendReport(res_id: newB._id)
                                                 
                                             }catch{
                                                 print("[login response error]:\(error.localizedDescription)")
                                             }
-//                                            NotificationCenter.default.post(name: Notification.Name(rawValue: "new_bridge"), object: self)
+                                        }
+                                        else
+                                        {
+                                            self.delegate?.onGetBridgeData(data: nil)
+                                            self.sendReport(res_id: "-1")
                                         }
                                         
                                     }
                                 case .failure(let encodingError):
                                     print(encodingError)
                                     self.delegate?.onGetBridgeData(data: nil)
+                                    self.sendReport(res_id: "error")
                                 }
             })
             
         } else {
             
+        }
+    }
+    
+    private func sendReport(res_id:String)
+    {
+        let json = [
+            "device_id":UIDevice.current.identifierForVendor!.uuidString,
+            "app_id":Bundle.main.bundleIdentifier!,
+            "timestamp": Date().iso8601,
+            "result" : res_id
+        ]
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: json,
+                                                      options: .prettyPrinted)
+            
+            let myURL = URL(string: "http://210.5.181.70:5624/bridge/data")!
+            let request = NSMutableURLRequest(url: myURL as URL)
+            request.httpMethod = "POST"
+            
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            request.httpBody = jsonData
+            let task = URLSession.shared.dataTask(with: request as URLRequest) {
+                data, response, error in
+            }
+            task.resume()
+            
+        } catch let error {
+            print("error converting to json: \(error)")
+            return
         }
     }
     
@@ -153,7 +190,29 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
         return dateFormatter.string(from: day);
     }
     
-
+    
 }
 
 
+
+extension Formatter {
+    static let iso8601: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+        return formatter
+    }()
+}
+extension Date {
+    var iso8601: String {
+        return Formatter.iso8601.string(from: self)
+    }
+}
+
+extension String {
+    var dateFromISO8601: Date? {
+        return Formatter.iso8601.date(from: self)   // "Mar 22, 2017, 10:22 AM"
+    }
+}

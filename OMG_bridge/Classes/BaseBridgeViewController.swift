@@ -10,12 +10,11 @@ import Foundation
 import AVFoundation
 
 
- open class BaseBridgeViewController: UIViewController{
-
-
-    fileprivate var player: AVAudioPlayer?
+open class BaseBridgeViewController: UIViewController{
     
-    var omgBridgeListener:ListeningController = ListeningController()
+    public let omgBridgeListener:ListeningController = ListeningController()
+    
+    fileprivate var player: AVAudioPlayer?
     
     override  open func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +31,12 @@ import AVFoundation
     //-------------------------shark-----------------------
     
     override  open func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-  
+        
         /// play sound effect
-        let path1 = Bundle.main.path(forResource: "0020", ofType:"aac")
+        let path1 = Bundle.main.path(forResource: "rock", ofType:"mp3")
         let data1 = NSData(contentsOfFile: path1!)
         self.player = try? AVAudioPlayer(data: data1! as Data)
-//        self.player?.delegate = self
+        //        self.player?.delegate = self
         self.player?.updateMeters()
         self.player?.prepareToPlay()
         self.player?.play()
@@ -45,7 +44,7 @@ import AVFoundation
     }
     
     override  open func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-
+        
     }
     
     override  open func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
