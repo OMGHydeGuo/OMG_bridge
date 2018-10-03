@@ -26,6 +26,9 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+    
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Microphone access needed for record</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

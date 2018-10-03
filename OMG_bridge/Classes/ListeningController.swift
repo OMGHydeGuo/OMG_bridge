@@ -116,7 +116,7 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
                                 switch encodingResult {
                                 case .success(let upload, _, _):
                                     upload.responseJSON { response in
-                                        debugPrint(response.result)
+//                                        debugPrint(response.result)
                                         
                                         let match =  String(data: response.data!, encoding: .utf8)?.contains("Not Match") == false;
                                         
@@ -130,7 +130,7 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
                                                 self.sendReport(res_id: newB._id)
                                                 
                                             }catch{
-                                                print("[login response error]:\(error.localizedDescription)")
+                                                print("[JSONDecoder error]:\(error.localizedDescription)")
                                             }
                                         }
                                         else
