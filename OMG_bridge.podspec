@@ -34,7 +34,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'OMG_bridge/Classes/**/*'
   
    s.resource_bundles = {
-     'OMG_bridge' => ['OMG_bridge/Assets/MP3/*']
+       #    'OMG_bridge' => ['OMG_bridge/Assets/MP3/*']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
