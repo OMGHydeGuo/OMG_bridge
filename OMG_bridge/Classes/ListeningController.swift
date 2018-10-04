@@ -66,14 +66,17 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
             self.endRecord()
         }
         
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.aac")
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.wav")
         
-        let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+        let settings:[String : Any] = [
+            AVFormatIDKey: kAudioFormatLinearPCM,
             AVSampleRateKey: 44100,
             AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-        ]
+            AVLinearPCMBitDepthKey : 8,
+            AVLinearPCMIsFloatKey: false,
+            AVLinearPCMIsBigEndianKey: false,
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
+            ]
         
         do {
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
@@ -99,13 +102,14 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
         return paths[0]
     }
     
+    
     private func finishRecording(success: Bool) {
         audioRecorder.stop()
         audioRecorder = nil
         
         if success {
             
-            let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.aac")
+            let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.wav")
             
             Alamofire.upload(multipartFormData:{ multipartFormData in
                 multipartFormData.append(audioFilename, withName: "audio_file")},
