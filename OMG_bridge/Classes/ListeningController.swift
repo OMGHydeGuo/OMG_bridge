@@ -28,6 +28,7 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     
+    open var tenantKey:String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjQ2ODg2MTE4MDYsImlhdCI6MTUzNTAxMTgwNiwic3ViIjoiNWI3ZTZiZGU5ZWQ2MmYzZGUxMzhlM2U0In0.VNF2__1YPBUmogYtDaGnSdQWYtEtMmfZgRsb4JgHGlE"
     
     override public init()
     {
@@ -116,7 +117,7 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
                 multipartFormData.append(audioFilename, withName: "audio_file")},
                              to:"https://api-bridge.onwardsmg.com/v1/fingerprint/result",
                              method:.post,
-                             headers:["Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjQ2ODg2MTE4MDYsImlhdCI6MTUzNTAxMTgwNiwic3ViIjoiNWI3ZTZiZGU5ZWQ2MmYzZGUxMzhlM2U0In0.VNF2__1YPBUmogYtDaGnSdQWYtEtMmfZgRsb4JgHGlE"],
+                             headers:["Authorization": tenantKey],
                              encodingCompletion: { encodingResult in
                                 switch encodingResult {
                                 case .success(let upload, _, _):

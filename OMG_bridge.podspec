@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OMG_bridge'
-  s.version          = '0.1.7'
+  s.version          = '0.1.9'
   s.summary          = 'OMG bridge.'
   s.swift_version    = '4.2'
 
