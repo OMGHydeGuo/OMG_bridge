@@ -72,7 +72,7 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
             AVFormatIDKey: kAudioFormatLinearPCM,
             AVSampleRateKey: 44100,
             AVNumberOfChannelsKey: 1,
-            AVLinearPCMBitDepthKey : 8,
+            AVLinearPCMBitDepthKey : 16,
             AVLinearPCMIsFloatKey: false,
             AVLinearPCMIsBigEndianKey: false,
             AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
@@ -107,6 +107,7 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
         audioRecorder.stop()
         audioRecorder = nil
         
+        debugPrint("..finishRecording dome..")
         if success {
             
             let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.wav")
@@ -120,7 +121,7 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
                                 switch encodingResult {
                                 case .success(let upload, _, _):
                                     upload.responseJSON { response in
-//                                        debugPrint(response.result)
+                                        debugPrint(response.result)
                                         
                                         let match =  String(data: response.data!, encoding: .utf8)?.contains("Not Match") == false;
                                         
@@ -134,6 +135,8 @@ public class ListeningController: NSObject ,AVAudioRecorderDelegate{
                                                 self.sendReport(res_id: newB._id)
                                                 
                                             }catch{
+                                                self.delegate?.onGetBridgeData(data: nil)
+                                                self.sendReport(res_id: "error")
                                                 print("[JSONDecoder error]:\(error.localizedDescription)")
                                             }
                                         }

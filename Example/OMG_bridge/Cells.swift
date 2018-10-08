@@ -27,7 +27,7 @@ class BridgeCell :UITableViewCell
         self.viewsNum?.text = "0"
         self.videoImage?.image = UIImage()
         
-        self.videoImage?.image(fromUrl: vo.thumbnail)
+        self.videoImage?.image(fromUrl: vo.thumbnail ?? "")
     }
 }
 
@@ -46,8 +46,8 @@ class BridgeDetailCell :UITableViewCell
         
         self.nameLable?.text = vo.fingerPrints[0].title
         self.detailLable?.text = vo.fingerPrints[0].description
-        self.iconImage?.image(fromUrl: vo.logo)
-        self.bigImage?.image(fromUrl: vo.thumbnail)
+        self.iconImage?.image(fromUrl: vo.logo ?? "")
+        self.bigImage?.image(fromUrl: vo.thumbnail ?? "")
     }
     
     @IBAction func clickDetail()

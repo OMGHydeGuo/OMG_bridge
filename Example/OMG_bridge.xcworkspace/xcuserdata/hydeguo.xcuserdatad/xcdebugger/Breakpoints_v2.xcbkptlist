@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../OMG_bridge/Classes/ListeningController.swift"
-            timestampString = "560326042.196978"
+            timestampString = "560422844.322216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "sendReport(res_id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../OMG_bridge/Classes/ListeningController.swift"
-            timestampString = "560326042.1974109"
+            timestampString = "560422844.322839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -42,11 +42,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../OMG_bridge/Classes/ListeningController.swift"
-            timestampString = "560326042.197714"
+            timestampString = "560422844.323269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "finishRecording(success:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../OMG_bridge/Classes/ListeningController.swift"
+            timestampString = "560422844.323689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "finishRecording(success:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OMG_bridge.ListeningController.(finishRecording in _5EF9A57EED0BEB0F29D1FF69DD124CB0)(success: Swift.Bool) -&gt; ()"
+                  moduleName = "OMG_bridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hydeguo/Library/Mobile%20Documents/com~apple~CloudDocs/codes/swift/OMG/OMG_bridge/OMG_bridge/Classes/ListeningController.swift"
+                  timestampString = "560417863.328633"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "743">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.MultipartFormData) -&gt; () in OMG_bridge.ListeningController.(finishRecording in _5EF9A57EED0BEB0F29D1FF69DD124CB0)(success: Swift.Bool) -&gt; ()"
+                  moduleName = "OMG_bridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hydeguo/Library/Mobile%20Documents/com~apple~CloudDocs/codes/swift/OMG/OMG_bridge/OMG_bridge/Classes/ListeningController.swift"
+                  timestampString = "560417863.331689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../OMG_bridge/Classes/ListeningController.swift"
+            timestampString = "560422844.324071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "finishRecording(success:)"
             landmarkType = "7">
          </BreakpointContent>

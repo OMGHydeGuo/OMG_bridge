@@ -24,8 +24,8 @@ public struct BridgeBody : Codable {
     public var originName:String
     public var fileName:String
     public var tenant_id:String
-    public var thumbnail:String
-    public var logo:String
+    public var thumbnail:String?
+    public var logo:String?
     public var fingerPrints:[FingerPrintsBody]
     public var type:String
 }
