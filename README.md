@@ -21,14 +21,14 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'OMG_bridge'
 ```
+Start bridge detect , you need to instance ListeningController 
 
 First , to set user tenant key
 ```ruby
 instance.tenantKey = "XXXXX"
 ```
 
-Start bridge detect , you just need to instance ListeningController . And call
-
+And call
 ```ruby
 startRecord()
 ```
